@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="112.078" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="To check addto cart and delete  button is working or not" name="" time="18.774">
+<system-out><![CDATA[
+Given addtocart and delete to cart should be open in default browser........passed
+When user must be select product and add to the cart then delete that product.passed
+Then successfully deleted...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user have to check login page is working or not" name="" time="25.533">
+<system-out><![CDATA[
+Given login page navigate to defauly browser................................passed
+When user enter the email and their password................................passed
+Then signin successfully....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user want to check all categories" name="" time="8.425">
+<system-out><![CDATA[
+Given shop by all category is available in home page........................passed
+When user should be click on shop by all category...........................passed
+Then it display all categories..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="to check shop by category button" name="" time="13.268">
+<system-out><![CDATA[
+Given shop by category option available on home page........................passed
+When user must be click on shop by category and select on category..........passed
+Then it display all all sub categories......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="validate login page" name="#1.1" time="7.009">
+<system-out><![CDATA[
+Given login page should be open in default browser..........................passed
+When click on login button and enter 123455.................................passed
+And add password............................................................passed
+And click on signin button check fail.......................................passed
+Then login successfully and open home page..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="validate login page" name="#1.2" time="6.832">
+<system-out><![CDATA[
+Given login page should be open in default browser..........................passed
+When click on login button and enter username...............................passed
+And add ng45666.............................................................passed
+And click on signin button check fail.......................................passed
+Then login successfully and open home page..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="validate login page" name="#1.3" time="7.675">
+<system-out><![CDATA[
+Given login page should be open in default browser..........................passed
+When click on login button and enter ahuunsss...............................passed
+And add 234fgh..............................................................passed
+And click on signin button check fail.......................................passed
+Then login successfully and open home page..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="validate login page" name="#1.4" time="8.592">
+<system-out><![CDATA[
+Given login page should be open in default browser..........................passed
+When click on login button and enter username...............................passed
+And add password............................................................passed
+And click on signin button check success....................................passed
+Then login successfully and open home page..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user want change the laguage" name="" time="15.679">
+<system-out><![CDATA[
+Given for changing language scrool down the screen..........................passed
+When change country to Spain................................................passed
+Then country change successfully............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login with Excel data" name="Login using Excel data" time="0.002">
+<system-out><![CDATA[
+Given user logs in using row 1..............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
