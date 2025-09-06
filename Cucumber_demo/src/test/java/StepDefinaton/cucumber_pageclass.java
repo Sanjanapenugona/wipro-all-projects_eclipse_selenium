@@ -78,34 +78,58 @@ public class cucumber_pageclass {
 	
 	public void changeAddressAndName() throws InterruptedException {
 	   
-	    driver.findElement(By.linkText("My eBay")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.linkText("Summary")).click();
-        Thread.sleep(2000);
+		 // Go to eBay home
+	    driver.findElement(By.id("gh-logo")).click();
+	    Thread.sleep(2000);
 
-        // Go to Account Settings → Personal Info
-        driver.findElement(By.linkText("Account")).click();
-        Thread.sleep(2000);
-       
+	    // Hover over "Hi Nasir!" menu
+	    WebElement hiMsg = driver.findElement(By.cssSelector("span.gh-identity__greeting"));
+	    Actions act = new Actions(driver);
+	    act.moveToElement(hiMsg).perform();
+	    Thread.sleep(2000);
+	    driver.get("https://accountsettings.ebay.com/uas");
+	    Thread.sleep(3000);
 
-        driver.findElement(By.linkText("Personal Information")).click();
-        Thread.sleep(3000);
+	    
+	    driver.findElement(By.id("account-settings-link-PI")).click();
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.id("pass")).sendKeys("SaiRaghav@1903");
+		driver.findElement(By.id("sgnBt")).click();
 
-        // 4. Click edit on Name
-        driver.findElement(By.xpath("//a[contains(text(),'Edit') and contains(@href,'name')]")).click();
-        Thread.sleep(2000);
+	   
+	    driver.findElement(By.id("individual_personal_info_address_edit_button")).click();
+	    Thread.sleep(2000);
 
-        // 5. Change name
-        WebElement firstName = driver.findElement(By.id("firstname"));
-        firstName.clear();
-        firstName.sendKeys("Sanju");
+	   
+	    WebElement streetAddress = driver.findElement(By.cssSelector("input[aria-label='Street address']"));
+	    streetAddress.clear();
+	    streetAddress.sendKeys("Saptagiri Nagar,ACamp");
+	    Thread.sleep(1000);
 
-        WebElement lastName = driver.findElement(By.id("lastname"));
-        lastName.clear();
-        lastName.sendKeys("Penugonda");
+	    //Middle Name
+	    WebElement m_name = driver.findElement(By.id("middleName"));
+	    m_name.clear();
+	    m_name.sendKeys("Hussain");
+	    Thread.sleep(1000);
+	    
 
-        driver.findElement(By.id("saveBtn")).click();
-        Thread.sleep(3000);
+	    // City
+	    WebElement city = driver.findElement(By.id("city"));
+	    city.clear();
+	    city.sendKeys("kurnool");
+	    Thread.sleep(1000);
+
+	    // Zipcode
+	    WebElement zipcode = driver.findElement(By.id("postalCode"));
+	    zipcode.clear();
+	    zipcode.sendKeys("518002");
+	    Thread.sleep(1000);
+
+	  
+	    // Submit button
+	    driver.findElement(By.id("address_edit_submit_button")).click();
+	    Thread.sleep(2000);
     }
 	
 	

@@ -24,5 +24,30 @@
 <version>7.10.2</version>
 <scope>test</scope>
 </dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>6.2.0</version>
+</dependency>
+<dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.22.0</version>
+    </dependency>
+        
 </dependencies>
+<build><plugins>
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.3</version> <!-- Use a recent, stable version -->
+        <configuration>
+            <suiteXmlFiles>
+                <suiteXmlFile>testng.xml</suiteXmlFile> <!-- Path to your TestNG suite file -->
+            </suiteXmlFiles>
+            <!-- Other configurations like parallel execution, groups, etc. -->
+        </configuration>
+    </plugin></plugins>
+</build>
 </project>
