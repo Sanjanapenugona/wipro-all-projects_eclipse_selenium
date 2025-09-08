@@ -25,7 +25,7 @@ public class Orders {
 	public void user_have_to_click_on_orders_button() throws InterruptedException {
 		Page_class pg = new Page_class(driver);
 		pg.demouserlogin();
-		pg.Checkoutpage();
+	//	pg.Checkoutpage();
 		pg.Orders();
 	    
 	}

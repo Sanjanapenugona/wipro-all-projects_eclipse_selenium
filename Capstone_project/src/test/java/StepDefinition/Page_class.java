@@ -69,37 +69,42 @@ WebDriver driver;
     
 	
 	
-	public void Checkoutpage() {
+	public void Checkoutpage(String firstname, String lastname, String address, String state, String postalcode) {
 		//add to cart
 		driver.findElement(By.xpath("//*[@id=\"1\"]/div[4]")).click();
 		//checkout page
 		driver.findElement(By.cssSelector("div[class=\"buy-btn\"]")).click();
 		
-		WebElement firstname = driver.findElement(By.id("firstNameInput")); 
-		firstname.sendKeys("Sanjana");
-		firstname.sendKeys(Keys.ENTER);
+		WebElement firstname1 = driver.findElement(By.id("firstNameInput")); 
+		firstname1.clear();
+		firstname1.sendKeys(firstname);
+
 		
-		WebElement lastname = driver.findElement(By.id("lastNameInput"));
-		lastname.sendKeys("Penugonda");
-		lastname.sendKeys(Keys.ENTER);
+		WebElement lastname1 = driver.findElement(By.id("lastNameInput"));
+		lastname1.clear();
+		lastname1.sendKeys(lastname);
+		
+
 		
 		WebElement Address = driver.findElement(By.id("addressLine1Input"));
-		Address.sendKeys("Gummalladoddi");
+		Address.clear();
+		Address.sendKeys(address);
 		
-		Address.sendKeys(Keys.ENTER);
 		
 		WebElement State = driver.findElement(By.id("provinceInput"));
-		State.sendKeys("Andhra Pradesh");
-		State.sendKeys(Keys.ENTER);
-		
-		WebElement postalcode = driver.findElement(By.id("postCodeInput"));
-		postalcode.sendKeys("533289");
-		postalcode.sendKeys(Keys.ENTER);
+		State.clear();
+		State.sendKeys(state);
+	
+		WebElement postalcode1 = driver.findElement(By.id("postCodeInput"));
+		postalcode1.clear();
+		postalcode1.sendKeys(postalcode);
+
 		
 		driver.findElement(By.id("checkout-shipping-continue")).click();		
         driver.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
 	}
 	
+		
 
 	public void Logout() {
 		driver.findElement(By.id("signin")).click();

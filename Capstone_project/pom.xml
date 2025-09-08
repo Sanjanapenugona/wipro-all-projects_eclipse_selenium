@@ -70,7 +70,12 @@
         <version>4.22.0</version>
 </dependency>
 
-</dependencies>
+  	<dependency>
+  		<groupId>Automation_testing1</groupId>
+  		<artifactId>Automation_testing1</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 <build><plugins>
   <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -85,6 +90,4 @@
     </configuration>
     </plugin></plugins>
    </build>
- 
- 
 </project>
